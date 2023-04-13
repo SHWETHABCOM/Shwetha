@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+        integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+            integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+            integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Flipkart website</title>
+</head>
+<style>
+    nav {
+        background-color: #2874f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 10px 0px;
+    }
+
+    .pc {
+        color: yellow;
+        font-weight: 900;
+    }
+
+    .logo p {
+        color: white;
+        position: relative;
+        top: -5px;
+    }
+
+    .search {
+        background-color: white;
+        padding: 9px;
+        width: 420px;
+        height: 30px;
+        margin: 0px 15px;
+        display: flex;
+        justify-content: space-between;
+        color: blue;
+    }
+
+    .search input {
+        width: 380px;
+        height: 10px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+        border-radius: 9px;
+    }
+
+    .loginbtn {
+        padding: 7px 30px;
+        font-size: 15px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        color: blue;
+    }
+
+    .mc {
+        margin: 0px 20px;
+        font-size: 17px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0px 40px;
+    }
+
+    .mc:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+    .log {
+        position: absolute;
+        top: 61px;
+        height: 340px;
+        width: 250px;
+        margin-left: -100px;
+        background-color: white;
+        box-shadow: -5px 5px 7px rgb(83, 80, 80),
+            5px 5px 10px rgb(56, 55, 55);
+        display: none;
+    }
+
+    .log:hover {
+        transition: 2s ease-in-out;
+        background-color: #2874f0;
+    }
+
+    .login {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        font-size: 15px;
+    }
+
+    .login a {
+        color: blue;
+        text-decoration: none;
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+    .menulist {
+        display: block;
+        font-size: 10px;
+    }
+
+    .menulist p a {
+        padding-left: 10px;
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        color: rgb(63, 58, 58)
+    }
+
+    .menulist p a:hover {
+        background-color: rgb(198, 209, 180);
+        transition: 0.5s ease-in-out;
+    }
+
+    .menulist i {
+        font-size: 30px;
+        color: #2874f0;
+        padding-right: 80px;
+    }
+
+    .loginbtn:hover>.log {
+        display: block;
+        transition: 0.5s ease-in-out;
+        background-color: white;
+    }
+
+    .more {
+        position: absolute;
+        top: 61px;
+        padding: 20px;
+        height: 250px;
+        width: 250px;
+        margin-left: -90px;
+        background-color: white;
+        color: black;
+        box-shadow: -5px 5px 7px rgb(83, 80, 80),
+            5px 5px 10px rgb(56, 55, 55);
+        display: none;
+    }
+
+    .more i {
+        color: #2874f0;
+        font-size: 25px;
+    }
+
+    .more span {
+        color: black;
+        font-size: 18px;
+        justify-content: space-between;
+        font-weight: 500px;
+        text-align: center;
+    }
+
+    .more span:hover {
+        background-color: rgb(150, 161, 170);
+    }
+
+    .mc:hover>.more {
+        display: block;
+        transition: 0.5 ease-in-out;
+    }
+
+    .imagecont {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .imagecont img {
+        width: 130px;
+        height: 80px;
+        transition: 2s ease-in;
+    }
+
+    .imagecont:hover {
+        transition: 1s ease-in-out;
+        background-color: yellow;
+    }
+
+    .imagecont a {
+        display: flex;
+        font-size: 17px;
+        color: black;
+        font-weight: 500;
+        padding-left: 14px;
+        text-decoration: none;
+    }
+
+    .imagecont a:hover {
+        transition: 1s ease-in-out;
+        background-color: rgb(247, 241, 235);
+    }
+
+    .gif img {
+        width: 1400px;
+        height: 340px;
+        ;
+    }
+
+    .rupee {
+        display: flex;
+        padding-left: 70px;
+        justify-content: space-between;
+    }
+
+    .phone img:hover {
+        height: 280px;
+        width: 240px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .phone p {
+        color: green;
+        font-size: 25px;
+        font-weight: 400px;
+    }
+
+    .phone i {
+        font-size: 30px;
+    }
+
+    .phone1 img {
+        height: 260px;
+        width: 400px;
+
+    }
+
+    .phone1 img:hover {
+        height: 280px;
+        width: 420px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .phone span {
+        font-size: 25px;
+        font-weight: 500px;
+    }
+
+    .phone1 p {
+        color: green;
+        font-size: 25px;
+        font-weight: 400px;
+    }
+
+    .phone1 i {
+        font-size: 30px;
+    }
+
+    .phone1 span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .phone2 img {
+        height: 260px;
+        width: 400px;
+    }
+
+    .phone2 img:hover {
+        height: 280px;
+        width: 420px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .phone2 p {
+        color: green;
+        font-size: 25px;
+        font-weight: 400px;
+    }
+
+    .phone2 i {
+        font-size: 30px;
+    }
+
+    .phone2 span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .rupee1 {
+        display: flex;
+        padding-left: 70px;
+        justify-content: space-between;
+    }
+
+    .phone3 img {
+        height: 260px;
+        width: 400px;
+
+    }
+
+    .phone3 img:hover {
+        height: 280px;
+        width: 420px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .phone3 p {
+        color: green;
+        font-size: 25px;
+        font-weight: 400px;
+    }
+
+    .phone3 i {
+        font-size: 30px;
+    }
+
+    .phone3 span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .phone4 img {
+        height: 260px;
+        width: 400px;
+
+    }
+
+    .phone4 img:hover {
+        height: 280px;
+        width: 420px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .phone4 p {
+        color: green;
+        font-size: 25px;
+        font-weight: 400px;
+    }
+
+    .phone4 i {
+        font-size: 30px;
+    }
+
+    .phone4 span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .phone5 img {
+        height: 260px;
+        width: 400px;
+
+    }
+
+    .phone5 img:hover {
+        height: 280px;
+        width: 420px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .phone5 p {
+        color: green;
+        font-size: 25px;
+        font-weight: 400px;
+        padding-left: 10px;
+    }
+
+    .phone5 i {
+        font-size: 30px;
+    }
+
+    .phone5 span {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .jumbotron {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .circle1:hover {
+        transition: 1s ease;
+        width: 200px;
+        background-color: rgb(84, 197, 231);
+        box-shadow: 1px 1px 5px 5px blue;
+    }
+
+    .circle2:hover {
+        transition: 1s ease;
+        width: 200px;
+        background-color: rgb(84, 197, 231);
+        box-shadow: 1px 1px 5px 5px blue;
+    }
+
+    .circle3:hover {
+        transition: 1s ease;
+        width: 200px;
+        background-color: rgb(84, 197, 231);
+        box-shadow: 1px 1px 5px 5px blue;
+    }
+
+    .circle4:hover {
+        transition: 1s ease;
+        width: 200px;
+        background-color: rgb(84, 197, 231);
+        box-shadow: 1px 1px 5px 5px blue;
+    }
+
+    .circle5:hover {
+        transition: 1s ease;
+        width: 200px;
+        background-color: rgb(84, 197, 231);
+        box-shadow: 1px 1px 5px 5px blue;
+
+    }
+
+    .circle6:hover {
+        transition: 1s ease;
+        width: 200px;
+        background-color: rgb(84, 197, 231);
+        box-shadow: 1px 1px 5px 5px blue;
+    }
+
+    .men {
+        display: flex;
+        padding-top: 20px;
+        justify-content: space-between;
+    }
+
+    .men1 {
+        display: flex;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    .dress {
+        background-color: rgb(240, 198, 145);
+        box-shadow: 5px solid black;
+    }
+
+    .dress1 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress1:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress2 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress2:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress3 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress3:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress4 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress4:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress5 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress5:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress6 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress6:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress7 {
+        border: 2px solid rgb(160, 97, 3);
+
+    }
+
+    .dress7:hover {
+        transition: 1s ease-in-out;
+    }
+
+    .dress1 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dress1 i {
+        font-size: 25px;
+        font-weight: 500;
+        color: #2874f0;
+    }
+
+    .dress1 p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dress1 p:hover {
+        transition: 1s ease-in-out;
+        background-color: aliceblue;
+        text-decoration: none;
+    }
+
+    .dress1 a {
+        text-decoration: none;
+    }
+
+    .dress2 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dress2 i {
+        font-size: 25px;
+        font-weight: 500;
+        color: #2874f0;
+    }
+
+    .dress2 p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dress2 p:hover {
+        transition: 1s ease-in-out;
+        background-color: aliceblue;
+        text-decoration: none;
+    }
+
+    .dress2 a {
+        text-decoration: none;
+    }
+
+    .dress3 p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dress3 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dress3 span:hover {
+        transition: 1s ease-in-out;
+        background-color: aliceblue;
+        width: 100px;
+        text-decoration: none;
+    }
+
+    .dress3 a {
+        text-decoration: none;
+    }
+
+    .dress4 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dress4 i {
+        font-size: 25px;
+        font-weight: 500;
+        color: #2874f0;
+    }
+
+    .dress4 p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dress4 p:hover {
+        transition: 1s ease-in-out;
+        background-color: aliceblue;
+        text-decoration: none;
+    }
+
+    .dress4 a {
+        text-decoration: none;
+    }
+
+    .dress5 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dress5 i {
+        font-size: 25px;
+        font-weight: 500;
+        color: #2874f0;
+    }
+
+    .dress5 p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+    }
+
+    .dress5 p:hover {
+        transition: 1s ease-in-out;
+        background-color: aliceblue;
+        text-decoration: none;
+    }
+
+    .dress5 a {
+        text-decoration: none;
+    }
+
+    .dress7 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dress7 i {
+        font-size: 25px;
+        font-weight: 500;
+        color: #2874f0;
+    }
+
+    .dress7 p {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .dress7 p:hover {
+        transition: 1s ease-in-out;
+        background-color: aliceblue;
+        text-decoration: none;
+    }
+
+    .dress7 a {
+        text-decoration: none;
+    }
+
+    .purple {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(243, 185, 243);
+        padding-left: 20px;
+        padding-top: 20px;
+        border-color: 2px solid black;
+        box-shadow: 10px 10px 10px 10px solid purple;
+    }
+
+  
+ 
+
+    .footer2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        text-decoration: none;
+        flex-wrap: wrap;
+        color: white;
+
+    }
+.footer{
+    background-color: blue;
+}
+    .footer0 {
+        font-weight: 1200;
+        color:gold;
+        transition-duration: 1s;
+       
+    }
+
+    .footer0:hover {
+        color: rgb(243, 168, 7);
+
+
+    }
+.footer1{
+font-size: 20px;
+margin-left: 600px;
+}
+.socialmedia i{
+    color:goldenrod;
+}
+.socialmedia i:hover{
+    color: gold;
+}
+    .footer2 .heading {
+        font-weight: 900;
+        font-size: 18px;
+        color: gold;
+    }
+
+    .footer3 {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: white;
+    }
+
+    .footer2 .heading:hover {
+        color:rgb(243, 168, 7);
+        
+    }
+
+    .footer2 .div:hover {
+         transform: scale(1.05);
+         color: white;
+    }
+
+    .footer3 h4 {
+        margin:0 10px;
+        color: aliceblue;
+    }
+
+    .footer2 div {
+     margin:10px;
+     color: white;
+    }
+</style>
+</body>
+<nav>
+    <div class="logo">
+        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+            width="75px" height="20px">
+        <p>Explore <span class="pc">plus</span></p>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search for products and more">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+
+    <button class="loginbtn">Login
+        <div class="log">
+            <div class="login">
+                <a href="">Sign up</a>
+                <div class="menulist">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <p><a href="https://www.flipkart.com/account/?rd=0&link=home_account">My Profile</a></p>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <p><a href="https://www.flipkart.com/wishlist?link=home_wishlist">Wishlist</a></p>
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                    <p><a href="https://www.flipkart.com/the-gift-card-store?link=home_giftcard">Giftcard</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </button>
+    <br>
+
+
+    <a href="#" class="mc">More
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+        <div class="more">
+            <i class="fa fa-bell" aria-hidden="true"><span>Notification Preferences</span></i><br><br>
+            <i class="fa fa-question-circle" aria-hidden="true"> <span>24x7 Customer Care</span></i><br><br>
+            <i class="fa fa-download" aria-hidden="true"><span>Download App</span></i><br><br>
+            <i class="fa fa-sort" aria-hidden="true"><span>Advertisemwnt</span></i>
+        </div>
+    </a>
+    <a href="https://www.flipkart.com/mobile-apps?otracker=ch_vn_mobile_apps" class="mc">Card
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+</nav>
+
+
+<div class="imagecont">
+    <p><img src="img/elec.jpg">
+        <a
+            href="https://www.flipkart.com/home-kitchen/electric-jugs-heatertravel-kettles/pr?sid=j9e,m38,xrv&q=electonic&otracker=categorytree">Electronics</a>
+    </p>
+    <br>
+    <p><img src="img/phone1.jpg">
+        <a
+            href="https://www.flipkart.com/apple-iphone-11-black-64-gb/p/itm4e5041ba101fd?pid=MOBFWQ6BXGJCEYNY&lid=LSTMOBFWQ6BXGJCEYNYZXSHRJ&marketplace=FLIPKART&q=mobile+phone&store=tyy%2F4io&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&fm=Search&iid=778d1e0d-710d-4a28-92d0-9e424753f185.MOBFWQ6BXGJCEYNY.SEARCH&ppt=sp&ppn=sp&ssid=289d1x3d000000001674292316282&qH=37695f7554f510f0">Mobiles</a>
+    </p>
+    <br>
+    <p><img src="img/fas.jpg">
+        <a
+            href="https://www.flipkart.com/nutriglow-natural-s-advanced-pro-formula-combo-pack-5-diamond-radiance-skin-whitening-gold-kesar-papaya-wine-facial-kit-60gm-each-skin-cell-repair-reduce-pigmentation-spotless-face/p/itmc41fde717eda8?pid=FCKGA38NHYTEAZHQ&lid=LSTFCKGA38NHYTEAZHQKI1QK5&marketplace=FLIPKART&q=facial+kit&store=g9b%2Fema%2F5la%2F0wq&srno=s_1_13&otracker=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_na&fm=search-autosuggest&iid=4bf6782b-1d10-437e-ae22-260486bb0f8c.FCKGA38NHYTEAZHQ.SEARCH&ppt=sp&ppn=sp&ssid=ims3mjtbmo0000001674292490176&qH=f90153bef482d1c7">Fashion</a>
+    </p>
+    <br>
+    <p><img src="img/home.jpg">
+        <a
+            href="https://www.flipkart.com/home-garage-160-tc-woolen-double-3d-printed-flat-bedsheet/p/itm961c7d4d1ef1a?pid=BDSGHDSUKSUZV4RT&lid=LSTBDSGHDSUKSUZV4RTHYOPHS&marketplace=FLIPKART&q=home+&store=search.flipkart.com&srno=s_1_6&otracker=search&otracker1=search&fm=Search&iid=47134809-840e-4f53-875e-34e2505d8ad5.BDSGHDSUKSUZV4RT.SEARCH&ppt=sp&ppn=sp&ssid=wl9ogj01g00000001674292590159&qH=a27772b6f0e0fdfc">Home</a>
+    </p>
+    <br>
+    <p><img src="img/baby.jpg">
+        <a
+            href="https://www.flipkart.com/msy-blue-shed-3-feet-tedst-bear-valentine-anniversary-birthday-very-cute-looking-soft-hugable-american-style-teddy-best-gift-90-1-cm/p/itm0ddd1571d7b9c?pid=STFG9MS48HQJJEJG&lid=LSTSTFG9MS48HQJJEJGG1PH86&marketplace=FLIPKART&q=toy&store=tng&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_y737AfUfjMRfsijp9qpHyhhqDc21FAjpB1yHfUMnkHHsYagl008vBTKWPOjeGHnduu50e6%2B4Q2SdMCHz%2BT0JOA%3D%3D&ppt=sp&ppn=sp&ssid=1g9xtz6pbk0000001674292637475&qH=10016b6ed5a5b09b">Toys&Baby</a>
+    </p>
+    <br>
+    <p><img src="img/makeup.jpg">
+        <a
+            href="https://www.flipkart.com/lady-fashion-15-pcs-xclusive-makeup-kit-xcm01s036/p/itmf87276bedab82?pid=MKTG6Y2FEYFN82QG&lid=LSTMKTG6Y2FEYFN82QGIYSMOB&marketplace=FLIPKART&q=makeup+kit&store=g9b%2Fffi%2F3dd%2Fzjo&srno=s_1_3&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&fm=Search&iid=fa3462be-d80b-419c-9b58-257d3b227ef0.MKTG6Y2FEYFN82QG.SEARCH&ppt=sp&ppn=sp&ssid=4t5lwx6hc00000001674292671397&qH=09ef19c5892f64b4">Personal
+            Care</a>
+    </p>
+    <br>
+    <p><img src="img/furniture.jpg">
+        <a
+            href="https://www.flipkart.com/sekar-lifestyle-teak-wood-slab-series-78-inches-solid-king-bed/p/itma0fa0b78f74bb?pid=BDDGK3G5K27RZHRR&lid=LSTBDDGK3G5K27RZHRR2S4OB0&marketplace=FLIPKART&q=furniture&store=wwe%2F7p7%2F4yf&srno=s_1_2&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&fm=search-autosuggest&iid=en_GhmujbEz%2BzO7PlSQ86RpQF7qpZAN2QASnlrIKs6GltGuulhLVzwdUd8idr078dYXUGSsKKe%2Fks%2Bt1YxPHCNOBg%3D%3D&ppt=sp&ppn=sp&ssid=c7haj0uti80000001674292703111&qH=fd87f5969ecaa22e">Furniture</a>
+    </p>
+    <br>
+    <p><img src="img/bike.jpg">
+        <a
+            href="https://www.flipkart.com/fit-fly-waterproof-two-wheeler-cover-honda/p/itm5efd2b34a2983?pid=TWCFZMJHAJGGGZAS&lid=LSTTWCFZMJHAJGGGZASAGCT4M&marketplace=FLIPKART&q=honda+bike&store=1mt&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_Pl5dUhh9yAo4o7aV0zcaQXSiHzITW8Xpn%2BbrVckeKVALqD5R2gQtELU8naxv0hifBceThUhst5v3Rk5g6%2Fgktw%3D%3D&ppt=sp&ppn=sp&ssid=zz0acmdyxs0000001674292744267&qH=f7e2db37bb5e5fff">Cars
+            & Bikes</a>
+    </p>
+    <br>
+    <p><img src="img/jew.jpg">
+        <a
+            href="https://www.flipkart.com/sukkhi-alloy-chandbali-earring/p/itm878f1b04e73fe?pid=JWSFG5CEQTGFT869&lid=LSTJWSFG5CEQTGFT869Y9BJZQ&marketplace=FLIPKART&q=jewellery+for+women&store=mcr%2F96v%2Fyx2&spotlightTagId=BestsellerId_mcr%2F96v%2Fyx2&srno=s_1_22&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&fm=search-autosuggest&iid=bb815485-7e0d-4628-98f6-f19af72e239e.JWSFG5CEQTGFT869.SEARCH&ppt=sp&ppn=sp&ssid=yk2wqbcv4g0000001674292773585&qH=ce533df150a10b44">jewellery</a>
+    </p>
+    <br>
+    <p><img src="img/medical.jpg">
+        <a
+            href="Vhttps://www.flipkart.com/dolo-650-tablets/p/itmaf6ac78b53bd0?pid=ALOG49HYFZMCZ66Z&lid=LSTALOG49HYFZMCZ66Z7YBVTN&marketplace=FLIPKART&q=+fever+medicine&store=search.flipkart.com&srno=s_1_4&otracker=search&otracker1=search&fm=Search&iid=7044adbd-fe7e-47c0-be07-3f16a2f177ee.ALOG49HYFZMCZ66Z.SEARCH&ppt=sp&ppn=sp&ssid=972bbiipds0000001674292975654&qH=fe37014ec3bbaa76">Medicines</a>
+    </p>
+</div>
+<div class="gif">
+    <img src="img/animation.gif">
+</div>
+<br>
+<div class="rupee">
+    <div class="phone">
+        <img src="img/phone.jpg">
+        <p>Apple Iphone 13</p>
+        <span><i class="fa fa-inr" aria-hidden="true"></i>72,800</span>
+    </div>
+    <div class="phone1">
+        <img src="img/laptop.jpg">
+        <p>Lenove laptop</p>
+        <span><i class="fa fa-inr" aria-hidden="true"></i>1,50,000</span>
+    </div>
+    <div class="phone2">
+        <img src="img/tv.jpg">
+        <p>Lenovo TV</p>
+        <span><i class="fa fa-inr" aria-hidden="true"></i>1,00,000</span>
+    </div>
+</div>
+
+<div class="rupee1">
+    <div class="phone3">
+        <img src="img/oven.jpg">
+        <p>LG Oven</p>
+        <span><i class="fa fa-inr" aria-hidden="true"></i>80,000</span>
+    </div>
+    <div class="phone4">
+        <img src="img/fridge.jpg">
+        <p>LG Fridge</p>
+        <span><i class="fa fa-inr" aria-hidden="true"></i>1,10,000</span>
+    </div>
+    <div class="phone5">
+        <img src="img/watch.jpg">
+        <p>Apple Watch</p>
+        <span><i class="fa fa-inr" aria-hidden="true"></i>1,40,000</span>
+    </div>
+</div>
+<br>
+<div class="ac">
+    <img src="img/AC.gif" width="1400px" height="500px">
+</div>
+<br>
+
+<div class="geo">
+    <img src="img/gor1.gif" width="1400px" height="500px">
+</div>
+
+<div class="jumbotron">
+    <div class="circle1">
+        <a
+            href="https://www.flipkart.com/potato-2-kg/p/itmadf8d19e8a3ff?pid=VEGFW9CST5YHVZQY&lid=LSTVEGFW9CST5YHVZQYKSKOPC&marketplace=GROCERY&iid=2b0f9fd7-280d-4a36-b9a1-431939d14fd7.VEGFW9CST5YHVZQY.SEARCH"><img
+                src="img/veg.jpg" class="img-circle" width="200px" height="200px"></a>
+    </div>
+    <div class="circle2">
+        <a
+            href="https://www.flipkart.com/grocery/packaged-food/chocolates-sweets/pr?sid=73z,u0u,7o6&otracker=categorytree&marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_2b0f9fd7-280d-4a36-b9a1-431939d14fd7_2_SFAIKQL0A2D4_MC.XDTF6QJ4BWBW&otracker=dynamic_rich_navigation_4_2.navigationCard.RICH_NAVIGATION_Packaged%2BFood~Chocolates%2B%2526%2BSweets_XDTF6QJ4BWBW&otracker1=dynamic_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_4_L1_view-all&cid=XDTF6QJ4BWBW"><img
+                src="img/chocolate.jpg" class="img-circle" width="200px" height="200px"></a>
+    </div>
+    <div class="circle3">
+        <a
+            href="https://www.flipkart.com/grocery/snacks-beverages/coffee/pr?sid=73z,ujs,t7k&otracker=categorytree&marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_2b0f9fd7-280d-4a36-b9a1-431939d14fd7_2_SFAIKQL0A2D4_MC.098FWDWWR6ZV&otracker=dynamic_rich_navigation_4_2.navigationCard.RICH_NAVIGATION_Snacks%2B%2526%2BBeverages~Coffee_098FWDWWR6ZV&otracker1=dynamic_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_4_L1_view-all&cid=098FWDWWR6ZV"><img
+                src="img/coffee.jpg" class="img-circle" width="200px" height="200px"></a>
+    </div>
+    <div class="circle4">
+        <a
+            href="https://www.flipkart.com/grocery/household-care/floor-other-cleaners/pr?sid=73z,cwl,u3c&otracker=categorytree&marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_2b0f9fd7-280d-4a36-b9a1-431939d14fd7_2_SFAIKQL0A2D4_MC.L8H68E76OXNJ&otracker=dynamic_rich_navigation_3_2.navigationCard.RICH_NAVIGATION_Household%2BCare~Floor%2B%2526%2BOther%2BCleaners_L8H68E76OXNJ&otracker1=dynamic_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L1_view-all&cid=L8H68E76OXNJ"><img
+                src="img/health.jpg" class="img-circle" width="200px" height="200px"></a>
+    </div>
+    <div class="circle5">
+        <a
+            href="https://www.flipkart.com/grocery/packaged-food/noodles-pasta/pr?sid=73z,u0u,ltz&otracker=categorytree&marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_2b0f9fd7-280d-4a36-b9a1-431939d14fd7_2_SFAIKQL0A2D4_MC.GOSA97N625VX&otracker=dynamic_rich_navigation_2_2.navigationCard.RICH_NAVIGATION_Packaged%2BFood~Noodles%2B%2526%2BPasta_GOSA97N625VX&otracker1=dynamic_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L1_view-all&cid=GOSA97N625VX"><img
+                src="img/maggi.jpg" class="img-circle" width="200px" height="200px"></a>
+    </div>
+    <div class="circle6">
+        <a
+            href="https://www.flipkart.com/grocery/~cs-cq6mm6u2d9/pr?sid=73z&marketplace=GROCERY&collection-tab-name=Kitchen+tools&p%5B%5D=facets.discount_range_v1%255B%255D%3D10%2525%2Bor%2Bmore&fm=neo%2Fmerchandising&iid=M_2b0f9fd7-280d-4a36-b9a1-431939d14fd7_2_SFAIKQL0A2D4_MC.W18YJL3ZPA2C&otracker=dynamic_rich_navigation_2_2.navigationCard.RICH_NAVIGATION_Home%2B%2526%2BKitchen~Kitchen%2BTools_W18YJL3ZPA2C&otracker1=dynamic_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L1_view-all&cid=W18YJL3ZPA2C"><img
+                src="img/whear.jpg" class="img-circle" width="200px" height="200px"></a>
+    </div>
+</div>
+<br>
+<div class="dress">
+    <div class="men">
+        <div class="dress1">
+            <img src="img/shirt.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>1,299</a></p>
+        </div>
+        <div class="dress2">
+            <img src="img/shirt2.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>2,000</a></p>
+        </div>
+        <div class="dress3">
+            <img src="img/shoe.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>No
+                        Cost EML></span></a></p>
+        </div>
+        <div class="dress4">
+            <img src="img/shirt3.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>2,500</a></p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="men1">
+        <div class="dress5">
+            <img src="img/shirt6.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>3,500</a></p>
+
+        </div>
+        <div class="dress6">
+            <img src="img/wedding.jpg" class="img-rounded" width="700px" height="300px">
+        </div>
+
+        <div class="dress7">
+            <img src="img/shirt5.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>5,500</a></p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="purple">
+    <div class="purple1">
+        <img src="img/purple1.jpg" width="300px" height="200px" class="img-circle">
+        <img src="img/purple2.jpg" width="300px" height="200px" class="img-circle">
+
+    </div>
+    <div class="purple2">
+        <img src="img/purple3.jpg" width="300px" height="200px" class="img-circle">
+        <img src="img/purple4.jpg" width="300px" height="200px" class="img-circle">
+
+    </div>
+    <div class="purple3">
+        <img src="img/purple5.jpg" width="300px" height="200px" class="img-circle">
+        <img src="img/purple6.jpg" width="300px" height="200px" class="img-circle">
+    </div>
+    <div class="purple4">
+        <img src="img/gas.jpg" width="300px" height="200px" class="img-circle">
+        <img src="img/fridge.jpg" width="300px" height="200px" class="img-circle">
+
+    </div>
+</div>
+<br>
+<div class="add">
+    <img src="img/dress gif.webp" width="1380px" height="400px">
+</div>
+<br>
+
+<div class="dress">
+    <div class="men">
+        <div class="dress1">
+            <img src="img/saree7.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>1,299</a></p>
+        </div>
+        <div class="dress2">
+            <img src="img/saree5.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>3,000</a></p>
+        </div>
+        <div class="dress3">
+            <img src="img/saree4.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>No
+                        Cost EML></span></a></p>
+        </div>
+        <div class="dress4">
+            <img src="img/saree3.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>2,900</a></p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="men1">
+        <div class="dress5">
+            <img src="img/saree2.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>3,500</a></p>
+
+        </div>
+        <div class="dress6">
+            <img src="img/sareebig.jpg" class="img-rounded" width="700px" height="300px">
+        </div>
+
+        <div class="dress7">
+            <img src="img/saree.jpg" class="img-rounded" width="220px" height="250px">
+            <p><a
+                    href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts"><span>From</span><i
+                        class="fa fa-inr" aria-hidden="true"></i>5,500</a></p>
+        </div>
+    </div>
+</div>
+<br>
+</div>
+
+
+
+<div class="footer">
+    <div class="footer0">
+        <h1>ShoPperZ</h1>
+    </div>
+    
+    <div class="footer2">
+        <div class="product">
+            <div class="heading">Products</div>
+            <div class="div">Sell your Products</div>
+            <div class="div">Advertise</div>
+            <div class="div">Pricing</div>
+            <div class="div">Product Buisness</div>
+        </div>
+        <div class="services">
+            <div class="heading">Services</div>
+            <div class="div">Return</div>
+            <div class="div">Cash Back</div>
+            <div class="div">Affiliate Marketing</div>
+            <div class="div">Others</div>
+        </div>
+        <div class="Company">
+            <div class="heading">Company</div>
+            <div class="div">Complaint</div>
+            <div class="div">Careers</div>
+            <div class="div">Affiliate Marketing</div>
+            <div class="div">Support</div>
+        </div>
+        <div class="Get Help">
+            <div class="heading">Get Help</div>
+            <div class="div">Help Center</div>
+            <div class="div">Privacy Policy</div>
+            <div class="div">Terms</div>
+            <div class="div">Login</div>
+        </div>
+    </div>
+    <div class="footer1">
+        <div class="socialmedia">
+            <a href="default.asp"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="default.asp"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="default.asp"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="default.asp"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+            <a href="default.asp"><i class="fa fa-skype" aria-hidden="true"></i></a>
+            <a href="default.asp"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="footer3">
+        Copyright ©
+        <h4>ShoPperZ</h4>
+        2021-2028
+    </div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
